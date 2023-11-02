@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_VMNOTIFY_NAME</name>
+    <creationDate>2023-11-03</creationDate>
+	<author>Gileba</author>
+	<authorEmail>info@gileba.be</authorEmail>
+	<authorUrl>https://www.gileba.be/</authorUrl>
+	<copyright>©2023 Gileba</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>0.0.1</version>
+	<description>PLG_SYSTEM_VMNOTIFY_DESCRIPTION</description>
+	<changelogurl>https://gileba.be/changelogs/plg_system_vmnotify.xml</changelogurl>
+    <files>
+        <filename plugin="vmnotify">vmnotify.php</filename>
+    </files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_vmnotify.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_vmnotify.sys.ini</language>
+		<language tag="nl-BE">nl-BE/nl-BE.plg_system_vmnotify.ini</language>
+		<language tag="nl-BE">nl-BE/nl-BE.plg_system_vmnotify.sys.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.plg_system_vmnotify.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.plg_system_vmnotify.sys.ini</language>
+	</languages>
+    <updateservers>
+		<server type="extension" priority="1" name="Virtuemart Notify">
+		  https://gileba.be/updates/plg_system_vmnotify.xml</server>
+	  </updateservers>
+</extension>

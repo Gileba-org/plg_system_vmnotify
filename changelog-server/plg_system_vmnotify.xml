@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+	<changelog>
+		<element>vmnotify</element>
+		<type>plugin</type>
+		<version>0.0.1</version>
+		<note>
+			<item>Starting implementation</item>
+		</note>
+	</changelog>
+</changelogs>

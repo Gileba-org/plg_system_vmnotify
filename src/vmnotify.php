@@ -10,7 +10,7 @@ defined("_JEXEC") or die("Restricted access");
 
 use Joomla\CMS\Plugin\CMSPlugin;
 
-class plgSystemGileba extends CMSPlugin
+class plgSystemVmnotify extends CMSPlugin
 {
 	/**
 	 * Load the language file on instantiation.

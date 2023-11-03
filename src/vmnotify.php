@@ -9,6 +9,7 @@
 defined("_JEXEC") or die("Restricted access");
 
 use Joomla\CMS\Plugin\CMSPlugin;
+use Joomla\CMS\Mail\Mail;
 
 class plgSystemVmnotify extends CMSPlugin
 {
@@ -37,12 +38,21 @@ class plgSystemVmnotify extends CMSPlugin
 		$input = $this->app->getInput();
 		$option = $input->get("option");
 
-		if ($option !== "com_users") {
+		if ($option !== "com_virtuemart") {
 			return;
 		}
 
-		$view = $input->get("view");
+		$task = $input->get("task");
+		if ($task !== "notifycustomer") {
+			return;
+		}
 
-		$this->app->enqueueMessage($view);
+		$mailer = new Mail();
+		$mailer->setSender("info@musalie.be");
+		$mailer->addRecipient("info@gileba.be");
+		$mailer->setSubject("Er is interesse in een uitverkocht product");
+		$mailer->setBody("Dit is een test");
+
+		$mailResult = $mailer->send();
 	}
 }

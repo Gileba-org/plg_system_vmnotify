@@ -13,6 +13,13 @@ use Joomla\CMS\Plugin\CMSPlugin;
 class plgSystemVmnotify extends CMSPlugin
 {
 	/**
+	 *  The Joomla Application object
+	 *
+	 *  @var  object
+	 */
+	protected $app;
+
+	/**
 	 * Load the language file on instantiation.
 	 *
 	 * @var    boolean
@@ -20,11 +27,22 @@ class plgSystemVmnotify extends CMSPlugin
 	 */
 	protected $autoloadLanguage = true;
 
-	/**
-	 *  Handling of protected extensions
-	 *  Throws a notice message if the Download Key is missing before downloading the package
-	 *
-	 *  @param   string  &$url      Update Site URL
-	 *  @param   array   &$headers
-	 */
+	public function onAfterRoute(): void
+	{
+		// Run this in frontend only
+		if (!$this->app->isClient("site")) {
+			return;
+		}
+
+		$input = $this->app->getInput();
+		$option = $input->get("option");
+
+		if ($option !== "com_users") {
+			return;
+		}
+
+		$view = $input->get("view");
+
+		$this->app->enqueueMessage($view);
+	}
 }

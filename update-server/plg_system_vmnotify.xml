@@ -4,7 +4,7 @@
 		<element>vmnotify</element>
 		<type>plugin</type>
 		<folder>system</folder>
-		<version>0.0.1</version>
+		<version>1.0.0</version>
 		<infourl title="Virtuemart Notify">https://gileba.be/</infourl>
   	  	<changelogurl>https://gileba.be/changelogs/plg_system_vmnotify.xml</changelogurl>
 		<client>site</client>
@@ -14,6 +14,6 @@
 		<tags>
 			<tag>alpha</tag>
 		</tags>
-		<targetplatform name="joomla" version="(4\.[0123456789])|(5\.[0123456789]))" />
+		<targetplatform name="joomla" version="(4\.[0123456789])" />
 	</update>
 </updates>

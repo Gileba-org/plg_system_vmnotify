@@ -3,9 +3,9 @@
 	<changelog>
 		<element>vmnotify</element>
 		<type>plugin</type>
-		<version>0.0.1</version>
+		<version>1.0.0</version>
 		<note>
-			<item>Starting implementation</item>
+			<item>First Release</item>
 		</note>
 	</changelog>
 </changelogs>

@@ -7,11 +7,11 @@
 	<authorUrl>https://gileba.be/</authorUrl>
 	<copyright>©2023 Gileba</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.O.0</version>
+	<version>1.0.0</version>
 	<description>PLG_SYSTEM_VMNOTIFY_DESCRIPTION</description>
 	<namespace path="src">Joomla\Plugin\System\Vmnotify</namespace>
 	<changelogurl>https://gileba.be/changelogs/plg_system_vmnotify.xml</changelogurl>
-    <files>
+	<files>
         <folder plugin="vmnotify">services</folder>
 		<folder>src</folder>
     </files>
